@@ -2,9 +2,9 @@
 const ExpenseItem=()=>{
     return(
         <div>
-            <p> food-$5</p>
-            <p>petrol-$10</p>
-            <p>movie-$20</p>
+            <div> food-$5</div>
+            <div>petrol-$10</div>
+            <div>movie-$20</div>
         </div>
     )
 }
