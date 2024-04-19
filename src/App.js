@@ -1,5 +1,5 @@
 
-import Expanses from "./Components/Expenses"
+import Expanses from "./Components/Expenses/Expenses"
 
 const App=()=>{
 
