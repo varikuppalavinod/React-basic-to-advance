@@ -1,8 +1,36 @@
 import ExpenseItem from "./Components/ExpenseItem"
 
 const App=()=>{
+
+  const expanses=[
+    {id:1,date:new Date(2020,7,15), title:"insurance" , price:"$100", location:"hyderabad"},
+    {id:2,date:new Date(2021,8,16), title:"banking" , price:"$200", location:"bangalore"},
+    {id:3,date:new Date(2022,9,17), title:"books" , price:"$300", location:"delhi"},
+    {id:4,date:new Date(2023,10,19), title:"food" , price:"$400", location:"mumbai"},
+  ]
   return(
     <div>
+      <h2>lets get started</h2>
+      {expanses.map((expanse)=>{
+        return(
+          <ExpenseItem
+          key={expanse.id}
+          date={expanse.date}
+          title={expanse.title}
+          price={expanse.price}
+          location={expanse.location}/>
+        )
+      })}
+     
+    </div>
+  )
+}
+
+export default App
+
+/*
+
+ <div>
       <h2>lets get started</h2>
       <ExpenseItem
       date={new Date(2023,7,15)}
@@ -27,8 +55,5 @@ const App=()=>{
       title="market"
       location="mumbai"
       price="$500"/>
-    </div>
-  )
-}
 
-export default App
+      */
