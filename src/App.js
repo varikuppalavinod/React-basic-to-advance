@@ -1,8 +1,10 @@
+import ExpenseItem from "./Components/ExpenseItem"
+
 const App=()=>{
   return(
     <div>
       <h2>lets get started</h2>
-      <h2>iam learning react</h2>
+      <ExpenseItem></ExpenseItem>
     </div>
   )
 }
