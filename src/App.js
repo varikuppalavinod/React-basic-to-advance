@@ -1,4 +1,5 @@
-import ExpenseItem from "./Components/ExpenseItem"
+
+import Expanses from "./Components/Expenses"
 
 const App=()=>{
 
@@ -11,16 +12,7 @@ const App=()=>{
   return(
     <div>
       <h2>lets get started</h2>
-      {expanses.map((expanse)=>{
-        return(
-          <ExpenseItem
-          key={expanse.id}
-          date={expanse.date}
-          title={expanse.title}
-          price={expanse.price}
-          location={expanse.location}/>
-        )
-      })}
+     <Expanses expanses={expanses}/>
      
     </div>
   )
