@@ -1,5 +1,6 @@
 
 import Expanses from "./Components/Expenses/Expenses"
+import NewExpense from "./Components/NewExpense/NewExpense"
 
 const App=()=>{
 
@@ -12,6 +13,7 @@ const App=()=>{
   return(
     <div>
       <h2>lets get started</h2>
+      <NewExpense/>
      <Expanses expanses={expanses}/>
      
     </div>
