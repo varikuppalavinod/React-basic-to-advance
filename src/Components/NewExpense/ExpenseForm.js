@@ -47,6 +47,7 @@ const Expenses=(props)=>{
                 <input type="date" id="date" value={entereddate} onChange={datechangehandler}/>
             </div>
             <div className="new-expense__actions">
+                <button onClick={props.onCancel}>Cancel</button>
                 <button type="submit">Add expense</button>
             </div>
             </div>
