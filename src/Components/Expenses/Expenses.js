@@ -15,7 +15,10 @@ const Expenses=(props)=>{
     })
     return(
         <Card className="expenses">
+           
             <Expensefilter selected={filteryear} filterchange={filterchangehandler}/>
+
+            {filteredexpenses.length===0 && <h2>No expenses please add</h2>}
             {filteredexpenses.map((expense)=>{
                 return(
                     <ExpenseItem
