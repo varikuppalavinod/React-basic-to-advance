@@ -1,20 +1,27 @@
-
+import React,{useState} from "react"
 import Expanses from "./Components/Expenses/Expenses"
 import NewExpense from "./Components/NewExpense/NewExpense"
 
 const App=()=>{
 
-  const expanses=[
+  const[expenses,setexpense]=useState([
     {id:1,date:new Date(2020,7,15), title:"insurance" , price:"$100", location:"hyderabad"},
     {id:2,date:new Date(2021,8,16), title:"banking" , price:"$200", location:"bangalore"},
     {id:3,date:new Date(2022,9,17), title:"books" , price:"$300", location:"delhi"},
     {id:4,date:new Date(2023,10,19), title:"food" , price:"$400", location:"mumbai"},
-  ]
+  ])
+
+  const onaddexpensedata=(expense)=>{
+     setexpense((prevexpense)=>{
+      return[expense,...prevexpense]
+     })
+       
+  }
   return(
     <div>
       <h2>lets get started</h2>
-      <NewExpense/>
-     <Expanses expanses={expanses}/>
+      <NewExpense onaddexpense={onaddexpensedata}/>
+     <Expanses expanses={expenses}/>
      
     </div>
   )
